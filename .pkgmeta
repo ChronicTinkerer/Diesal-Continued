@@ -1,0 +1,27 @@
+# Diesal Continued packaging manifest.
+# Consumed by BigWigsMods/packager v2 (see .github/workflows/release.yml).
+# Reference: https://github.com/BigWigsMods/packager
+
+# Folder name inside the published zip. Must match the .toc filename so
+# WoW can load the addon under the same name on user installs.
+package-as: Diesal-Continued
+
+# Don't ship dev/build infrastructure or editor state to end users.
+ignore:
+  - .dev
+  - .vscode
+  - .idea
+  - SESSION_NOTES.md
+  - "*.bat"
+  - "*.ps1"
+  - scratch
+  - tmp
+
+# We do NOT use @project-version@ substitution in the .toc -- the version
+# field carries our sequential build number (+1 per .dev/release.ps1 run).
+# The packager will leave a hardcoded `## Version:` line untouched, so no
+# `enable-toc-creation` or `move-out-of-package-as` directives are needed.
+
+# License is BSD 3-clause; ship LICENSE inside the package so embedders
+# and users see it. (LICENSE is at the repo root and lives inside
+# package-as by default.)

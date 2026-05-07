@@ -1,0 +1,27 @@
+## Interface: 120005, 50503, 20505, 11508, 120007
+## Title: Diesal Continued
+## Notes: Continuation of Diesal's BSD 3-clause widget kit (DiesalGUI / DiesalTools / DiesalStyle / DiesalMenu, c. 2014). Provides the same LibStub MAJORs as the 2014 originals so any addon that depends on them keeps working.
+## Author: ChronicTinkerer (original libraries by Diesal/diesal2010)
+## Version: 1
+## X-Category: Library
+## X-License: BSD 3-clause
+## DefaultState: enabled
+## LoadOnDemand: 0
+
+# LibStub: every addon library system needs it. Vendored copy.
+Libs\LibStub\LibStub.lua
+
+# DiesalTools: small shared utility module the rest of the family uses.
+DiesalTools-1.0\DiesalTools-1.0.lua
+
+# DiesalStyle: textures, outlines, fonts, media registration. Required
+# by DiesalGUI's widget rendering.
+DiesalStyle-1.0\DiesalStyle-1.0.lua
+
+# DiesalGUI: the 12-widget framework (Window, Button, CheckBox, Input,
+# ScrollFrame, Spinner, DropDown, ComboBox, etc). The .xml loads the
+# DiesalGUI-1.0.lua entry point and every Objects/*.lua file.
+DiesalGUI-1.0\DiesalGUI-1.0.xml
+
+# DiesalMenu: context-menu widgets layered on top of DiesalGUI.
+DiesalMenu-1.0\DiesalMenu-1.0.xml

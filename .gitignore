@@ -1,0 +1,14 @@
+# Editor configs (per the editor-config-never-committed policy).
+.vscode/
+.idea/
+
+# Dev-local artifacts (release scripts, intermediate dumps, configs,
+# session notes). Single .dev/ folder for all of it.
+.dev/
+
+# Session / scratch.
+SESSION_NOTES.md
+*.bat
+*.ps1
+scratch/
+tmp/
