@@ -5,11 +5,23 @@
 ## Version: 1
 ## X-Category: Library
 ## X-License: BSD 3-clause
+## X-Curse-Project-ID: 1536687
 ## DefaultState: enabled
 ## LoadOnDemand: 0
 
 # LibStub: every addon library system needs it. Vendored copy.
 Libs\LibStub\LibStub.lua
+
+# LibSharedMedia-3.0: cross-addon font/texture/sound registry. DiesalStyle
+# registers its bundled fonts with LSM for cross-addon discoverability.
+# The lookup inside DiesalStyle is soft (silent if LSM isn't present),
+# but vendoring LSM here keeps Diesal Continued self-contained.
+Libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+
+# CallbackHandler-1.0: required by DiesalGUI for its widget event
+# dispatch. This is the upstream WoWAce / ElvUI library; we ship a copy
+# so the addon doesn't depend on something else having loaded it.
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 
 # DiesalTools: small shared utility module the rest of the family uses.
 DiesalTools-1.0\DiesalTools-1.0.lua

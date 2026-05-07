@@ -54,7 +54,13 @@ local Style, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 if not Style then return end -- No Upgrade needed.
 -- ~~| Libraries |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 local Tools 	= LibStub("DiesalTools-1.0")
-local LibSharedMedia = LibStub("LibSharedMedia-3.0")
+-- LSM lookup is soft so DiesalStyle still loads when the host doesn't
+-- ship LibSharedMedia. The cross-addon font registration block below
+-- is gated on this being non-nil; widget rendering uses MediaPath
+-- directly and doesn't need LSM. (Diesal-Continued vendors LSM, but
+-- the same library file ships embedded in Cairn alongside its own LSM
+-- copy too, so we don't want either side to hard-require it.)
+local LibSharedMedia = LibStub("LibSharedMedia-3.0", true)
 -- ~~| Lua Upvalues |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 local type, select, pairs, tonumber									= type, select, pairs, tonumber
 local next																	= next
@@ -94,8 +100,11 @@ addMedia('texture', 'DiesalGUIcons', 'DiesalGUIcons16x256x128.tga')
 addMedia('border', 'shadow', 'shadow.tga')
 addMedia('border', 'shadowNoDist', 'shadowNoDist.tga')
 -- ~~ SharedMedia registration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-LibSharedMedia:Register("font", "Standard0755",     getMedia('font', 'Standard0755'))
-LibSharedMedia:Register("font", "FFF Intelligent",  getMedia('font', 'FFF Intelligent Thin Condensed'))
+-- Gated on LSM being loaded (it's a soft dep -- see top-of-file note).
+if LibSharedMedia and LibSharedMedia.Register then
+	LibSharedMedia:Register("font", "Standard0755",     getMedia('font', 'Standard0755'))
+	LibSharedMedia:Register("font", "FFF Intelligent",  getMedia('font', 'FFF Intelligent Thin Condensed'))
+end
 -- ~~ Cairn font objects ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- STANDARD_TEXT_FONT is a built-in WoW global that always resolves to a
 -- usable, locale-aware font path -- a clean replacement for the dropped

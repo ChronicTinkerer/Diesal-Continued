@@ -33,6 +33,8 @@ Two reasons:
 Original work © 2014 Diesal (diesal2010), New BSD (3-clause).
 Continuation maintenance © 2026 ChronicTinkerer, same license.
 
+The original addon: **[DiesalLibs on CurseForge](https://www.curseforge.com/wow/addons/diesallibs)**. That distribution stopped receiving updates after 2014; this addon is an unofficial continuation under the same BSD 3-clause license, refreshed for modern WoW interface versions.
+
 Each ported file's header preserves the original copyright notice. Modifications by ChronicTinkerer are noted inline where they meaningfully change behavior. See `LICENSE` for the full BSD 3-clause text.
 
 ## Usage
@@ -53,9 +55,9 @@ See the original Diesal documentation (preserved in each library file's header) 
 
 ## Distribution
 
-CurseForge: (slug TBD)
-WoWInterface: (slug TBD)
-Wago: (slug TBD)
+- **CurseForge:** https://www.curseforge.com/wow/addons/diesal-continued (project ID `1536687`)
+- WoWInterface: (TBD)
+- Wago: (TBD)
 
 ## Install (developer / local)
 
