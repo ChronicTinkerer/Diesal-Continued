@@ -6,6 +6,7 @@
 ## X-Category: Library
 ## X-License: BSD 3-clause
 ## X-Curse-Project-ID: 1536687
+## X-WoWI-ID: 27138
 ## DefaultState: enabled
 ## LoadOnDemand: 0
 

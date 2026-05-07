@@ -56,8 +56,7 @@ See the original Diesal documentation (preserved in each library file's header) 
 ## Distribution
 
 - **CurseForge:** https://www.curseforge.com/wow/addons/diesal-continued (project ID `1536687`)
-- WoWInterface: (TBD)
-- Wago: (TBD)
+- **WoWInterface:** https://www.wowinterface.com/downloads/info27138.html (ID `27138`)
 
 ## Install (developer / local)
 
