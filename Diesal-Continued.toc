@@ -2,7 +2,7 @@
 ## Title: Diesal Continued
 ## Notes: Continuation of Diesal's BSD 3-clause widget kit (DiesalGUI / DiesalTools / DiesalStyle / DiesalMenu, c. 2014). Provides the same LibStub MAJORs as the 2014 originals so any addon that depends on them keeps working.
 ## Author: ChronicTinkerer (original libraries by Diesal/diesal2010)
-## Version: 1
+## Version: 2
 ## X-Category: Library
 ## X-License: BSD 3-clause
 ## X-Curse-Project-ID: 1536687
