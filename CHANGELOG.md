@@ -7,6 +7,8 @@ Versions are sequential build numbers (one increment per `.dev/release.ps1` run)
 
 ## [Unreleased]
 
+(no pending changes)
+
 ## [1] — 2026-05-07 — Initial standalone release
 
 ### Added
